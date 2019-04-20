@@ -1,16 +1,17 @@
 # extraDimensions
-Extra Dimensions Minecraft Mod
+Extra Dimensions is possible to create dimensions that can be freely created by using commands.
+If you install this mod on server, no one has to install this(This mod can also work with server only)
+
 
 Allows dynamic creation and deletion of dimensions via commands (restricted to ops in multiplayer).  Adds the following commands:
-
 ```
 xdbiomes
   list all biomes supported by ExtraDimensions
 
 xdcreate <Dimension Name> <World Type> <Biomes>
   create a new ExtraDimension
-     <Dimension Name> - required.  String with no spaces
-     <World Type>     - optional.  World type for new dimension:
+  	<Dimension Name> - required.  String with no spaces
+	<World Type>     - optional.  World type for new dimension:
                                           xdMultiBiome - ExtraDimensions Default
                                           BOP          - Biomes O'Plenty (if installed)
                                           flat         - Minecraft flat world
@@ -18,7 +19,7 @@ xdcreate <Dimension Name> <World Type> <Biomes>
                                           largeBiomes  - Minecraft large biomes (as used on Minecraft servers)
                                           amplified    - Minecraft amplified
                                           default_1_1  - Minecraft
-		<Biomes>         - optional.  Comma separated list of biome IDs without spaces
+	<Biomes>         - optional.  Comma separated list of biome IDs without spaces
 
 xddelete <Dimension Name or ID>
   delete existing ExtraDimension
