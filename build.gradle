@@ -17,8 +17,8 @@ buildscript {
 
 apply plugin: 'forge'
 
-version = "1.0.0Test"
-group= "net.woogie.extraDimensions" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+version = "1.0.0beta2"
+group= "yukieiji.serverManagement.extraDimensions and net.woogie.extraDimensions  " // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "extraDimensions"
 
 minecraft {

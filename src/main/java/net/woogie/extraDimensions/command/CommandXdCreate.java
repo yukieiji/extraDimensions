@@ -32,7 +32,7 @@ public class CommandXdCreate extends CommandBase {
 	@Override
 	public String getCommandUsage(ICommandSender agent) {
 		return "/" + getCommandName()
-				+ " <Dimension Name> <Biomes> <World Type>";
+				+ " <Dimension Name> <World Type> <Biomes>";
 	}
 
 	@Override

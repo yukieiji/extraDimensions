@@ -7,18 +7,18 @@ Allows dynamic creation and deletion of dimensions via commands (restricted to o
 xdbiomes
   list all biomes supported by ExtraDimensions
 
-xdcreate <Dimension Name> <Biomes> <World Type>
+xdcreate <Dimension Name> <World Type> <Biomes>
   create a new ExtraDimension
      <Dimension Name> - required.  String with no spaces
-     <Biomes>         - optional.  Comma separated list of biome IDs without spaces
      <World Type>     - optional.  World type for new dimension:
                                           xdMultiBiome - ExtraDimensions Default
                                           BOP          - Biomes O'Plenty (if installed)
                                           flat         - Minecraft flat world
                                           default      - Minecraft overworld
                                           largeBiomes  - Minecraft large biomes (as used on Minecraft servers)
-                                          amplified    - Minecraft amplified 
+                                          amplified    - Minecraft amplified
                                           default_1_1  - Minecraft
+		<Biomes>         - optional.  Comma separated list of biome IDs without spaces
 
 xddelete <Dimension Name or ID>
   delete existing ExtraDimension
