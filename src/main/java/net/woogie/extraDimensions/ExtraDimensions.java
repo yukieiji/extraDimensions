@@ -1,15 +1,30 @@
 package net.woogie.extraDimensions;
 
 import java.util.EnumMap;
+import java.util.Map;
 
+import org.apache.logging.log4j.Level;
+
+import cpw.mods.fml.common.FMLCommonHandler;
+import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.SidedProxy;
+import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.event.FMLPostInitializationEvent;
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.event.FMLServerStartingEvent;
+import cpw.mods.fml.common.event.FMLServerStoppedEvent;
+import cpw.mods.fml.common.network.FMLEmbeddedChannel;
+import cpw.mods.fml.common.network.NetworkCheckHandler;
+import cpw.mods.fml.common.network.NetworkRegistry;
+import cpw.mods.fml.common.network.simpleimpl.SimpleNetworkWrapper;
+import cpw.mods.fml.relauncher.Side;
 import net.minecraft.command.ServerCommandManager;
-import net.minecraft.server.MinecraftServer;
 import net.minecraft.world.WorldType;
 import net.minecraftforge.common.DimensionManager;
 import net.minecraftforge.common.config.Configuration;
+import net.woogie.extraDimensions.command.CommandXdBiomes;
 import net.woogie.extraDimensions.command.CommandXdCreate;
 import net.woogie.extraDimensions.command.CommandXdDelete;
-import net.woogie.extraDimensions.command.CommandXdBiomes;
 import net.woogie.extraDimensions.command.CommandXdList;
 import net.woogie.extraDimensions.command.CommandXdRename;
 import net.woogie.extraDimensions.command.CommandXdTp;
@@ -25,26 +40,17 @@ import net.woogie.extraDimensions.world.WorldTypeMultiBiome;
 import net.woogie.extraDimensions.worldinfo.ExtraDimensionsWorldInfoHandler;
 import net.woogie.extraDimensions.worldinfo.ExtraDimensionsWorldInfoRegister;
 
-import org.apache.logging.log4j.Level;
-
-import cpw.mods.fml.common.FMLCommonHandler;
-import cpw.mods.fml.common.Mod;
-import cpw.mods.fml.common.SidedProxy;
-import cpw.mods.fml.common.event.FMLInitializationEvent;
-import cpw.mods.fml.common.event.FMLPostInitializationEvent;
-import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import cpw.mods.fml.common.event.FMLServerStartingEvent;
-import cpw.mods.fml.common.event.FMLServerStoppedEvent;
-import cpw.mods.fml.common.network.FMLEmbeddedChannel;
-import cpw.mods.fml.common.network.NetworkRegistry;
-import cpw.mods.fml.common.network.simpleimpl.SimpleNetworkWrapper;
-import cpw.mods.fml.relauncher.Side;
-
 @Mod(modid = "extraDimensions", version = "0.99.0", name = "ExtraDimensions", useMetadata = true, dependencies = "required-after:Forge@[10.12.0.1024,);after:TooManyBiomes;after:BiomesOPlenty")
 public class ExtraDimensions {
 
 	@SidedProxy(clientSide = "net.woogie.extraDimensions.ClientProxy", serverSide = "net.woogie.extraDimensions.CommonProxy")
 	public static CommonProxy proxy;
+
+	@NetworkCheckHandler
+	public boolean netCheckHandler(Map<String, String> mods, Side side)
+	{
+		return true;
+	}
 
 	@Mod.Instance("ExtraDimensions")
 	public static ExtraDimensions instance;
