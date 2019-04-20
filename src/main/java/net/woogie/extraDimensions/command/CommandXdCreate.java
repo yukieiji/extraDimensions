@@ -50,11 +50,11 @@ public class CommandXdCreate extends CommandBase {
 			String allowedBiomes = "*";
 
 			if (args.length > 1) {
-				allowedBiomes = args[1];
+				worldType = args[1];
 			}
 
 			if (args.length > 2) {
-				worldType = args[2];
+				allowedBiomes = args[2];
 			}
 
 			agent.addChatMessage(new ChatComponentText(ExtraDimensionsUtil
