@@ -1,6 +1,6 @@
 # extraDimensions
-Extra Dimensions is possible to create dimensions that can be freely created by using commands.
-If you install this mod on server, no one has to install this(This mod can also work with server only)
+Extra Dimensions is possible to create dimensions that can be freely created by using commands.<br>
+If you install this mod on server, no one has to install this!!(This mod can also work with server only)
 
 
 Allows dynamic creation and deletion of dimensions via commands (restricted to ops in multiplayer).  Adds the following commands:
