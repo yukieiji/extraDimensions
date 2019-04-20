@@ -40,7 +40,7 @@ import net.woogie.extraDimensions.world.WorldTypeMultiBiome;
 import net.woogie.extraDimensions.worldinfo.ExtraDimensionsWorldInfoHandler;
 import net.woogie.extraDimensions.worldinfo.ExtraDimensionsWorldInfoRegister;
 
-@Mod(modid = "extraDimensions", version = "1.0.0beta2", name = "ExtraDimensions", useMetadata = true, dependencies = "required-after:Forge@[10.12.0.1024,);after:TooManyBiomes;after:BiomesOPlenty")
+@Mod(modid = "extraDimensions", version = "1.0.0beta3", name = "ExtraDimensions", useMetadata = true, dependencies = "required-after:Forge@[10.12.0.1024,);after:TooManyBiomes;after:BiomesOPlenty")
 public class ExtraDimensions {
 
 	@SidedProxy(clientSide = "net.woogie.extraDimensions.ClientProxy", serverSide = "net.woogie.extraDimensions.CommonProxy")

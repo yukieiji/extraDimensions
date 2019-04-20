@@ -40,7 +40,7 @@ public class ExtraDimensionsWorldProvider extends WorldProvider {
 		try {
 			if (this.dimensionId == 0)
 				return "";
-			return "ExtraDimensions/" + this.dimensionId;
+			return "DIM" + this.dimensionId;
 		} catch (Exception e) {
 		}
 		return "";

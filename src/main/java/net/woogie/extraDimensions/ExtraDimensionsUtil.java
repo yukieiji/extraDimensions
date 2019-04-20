@@ -9,6 +9,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.commons.io.FileUtils;
+import org.apache.commons.lang3.StringUtils;
+import org.apache.logging.log4j.Level;
+
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldType;
@@ -21,10 +25,6 @@ import net.woogie.extraDimensions.network.CreateDimensionIdMessage;
 import net.woogie.extraDimensions.network.DeleteDimensionIdMessage;
 import net.woogie.extraDimensions.worldinfo.ExtraDimensionsWorldInfoHandler;
 import net.woogie.extraDimensions.worldinfo.ExtraDimensionsWorldInfoRegister;
-
-import org.apache.commons.io.FileUtils;
-import org.apache.commons.lang3.StringUtils;
-import org.apache.logging.log4j.Level;
 
 public class ExtraDimensionsUtil {
 	private static int extraDimensionsWorldType;
@@ -389,7 +389,7 @@ public class ExtraDimensionsUtil {
 	}
 
 	private static List<String> validWorldTypes() {
-		return Arrays.asList("xdMultiBiome", "BOP", "flat", "default",
+		return Arrays.asList("xdMultiBiome", "flat", "default",
 				"largeBiomes", "amplified", "default_1_1");
 	}
 }
